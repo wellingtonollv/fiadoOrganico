@@ -1,4 +1,4 @@
-	package fiado;
+package fiado;
 
 import java.util.Scanner;
 
@@ -6,17 +6,16 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int[] fiados = new int[10];
-//		fiados[0] = 12;
-//		fiados[3] = 87;
-
+		Consumidor consumidor = new Consumidor ();
+		consumidor.fiados= new int [10];
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Informe o nome:");
 		String nome = scanner.nextLine();
 		System.out.print("Informe o valor:");
-		fiados[0] = Integer.valueOf(scanner.nextLine());
+		consumidor.fiados[0] = Integer.valueOf(scanner.nextLine());
 
-		int total = somaWhile(fiados);
+		int total = somaWhile(consumidor.fiados);
+
 		System.out.println("Cliente: " + nome + " deve: " + total);
 	}
 
