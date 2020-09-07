@@ -20,6 +20,10 @@ public class Main {
 		consumidor.registrarFiado(fiado);
 
 		int total = consumidor.getFiado();
+		
+//		if(total>100) {
+//			System.out.println("Cliente " + consumidor.getNome()+ 	" deve: " + total);
+//		}
 
 		System.out.println("Cliente: " + nome + " Telefone: " + telefone +" deve: " + total);
 	}
