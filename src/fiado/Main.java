@@ -11,7 +11,7 @@ public class Main {
 		System.out.print("Informe o nome:");
 		String nome = scanner.nextLine();
 		
-		System.out.println("Infome o telefone:");
+		System.out.println("Informe o telefone:");
 		int telefone = Integer.valueOf(scanner.nextLine());
 		Consumidor consumidor = new Consumidor(nome,telefone);
 		
