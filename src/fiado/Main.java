@@ -5,18 +5,23 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-
-		Consumidor consumidor = new Consumidor ();
-		consumidor.fiados= new int [10];
+		
 		Scanner scanner = new Scanner(System.in);
+		
 		System.out.print("Informe o nome:");
 		String nome = scanner.nextLine();
+		
+		System.out.println("Infome o telefone:");
+		int telefone = Integer.valueOf(scanner.nextLine());
+		Consumidor consumidor = new Consumidor(nome,telefone);
+		
 		System.out.print("Informe o valor:");
-		consumidor.fiados[0] = Integer.valueOf(scanner.nextLine());
+		int fiado = Integer.valueOf(scanner.nextLine());
+		consumidor.registrarFiado(fiado);
 
-		int total = somaWhile(consumidor.fiados);
+		int total = consumidor.getFiado();
 
-		System.out.println("Cliente: " + nome + " deve: " + total);
+		System.out.println("Cliente: " + nome + " Telefone: " + telefone +" deve: " + total);
 	}
 
 	public static int somaWhile(int[] fiados) {
